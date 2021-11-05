@@ -148,10 +148,8 @@ D:\Repository\SolarEclipse\SolarEclipse\SolarEclipse\bin\Debug\net5.0\Microsoft.
 D:\Repository\SolarEclipse\SolarEclipse\SolarEclipse\obj\Debug\net5.0\Razor\Pages\Contacts\Create.cshtml.g.cs
 D:\Repository\SolarEclipse\SolarEclipse\SolarEclipse\obj\Debug\net5.0\Razor\Pages\Contacts\Delete.cshtml.g.cs
 D:\Repository\SolarEclipse\SolarEclipse\SolarEclipse\obj\Debug\net5.0\Razor\Pages\Contacts\Details.cshtml.g.cs
-D:\Repository\SolarEclipse\SolarEclipse\SolarEclipse\obj\Debug\net5.0\Razor\Pages\Contacts\Edit.cshtml.g.cs
 D:\Repository\SolarEclipse\SolarEclipse\SolarEclipse\obj\Debug\net5.0\Razor\Pages\Contacts\Index.cshtml.g.cs
 D:\Repository\SolarEclipse\SolarEclipse\SolarEclipse\obj\Debug\net5.0\Razor\Pages\MusicSubs\Create.cshtml.g.cs
 D:\Repository\SolarEclipse\SolarEclipse\SolarEclipse\obj\Debug\net5.0\Razor\Pages\MusicSubs\Delete.cshtml.g.cs
 D:\Repository\SolarEclipse\SolarEclipse\SolarEclipse\obj\Debug\net5.0\Razor\Pages\MusicSubs\Details.cshtml.g.cs
-D:\Repository\SolarEclipse\SolarEclipse\SolarEclipse\obj\Debug\net5.0\Razor\Pages\MusicSubs\Edit.cshtml.g.cs
 D:\Repository\SolarEclipse\SolarEclipse\SolarEclipse\obj\Debug\net5.0\Razor\Pages\MusicSubs\Index.cshtml.g.cs

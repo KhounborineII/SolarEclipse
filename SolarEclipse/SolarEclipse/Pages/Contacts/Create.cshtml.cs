@@ -38,7 +38,7 @@ namespace SolarEclipse.Pages.Contacts
             _context.Contacts.Add(Contact);
             await _context.SaveChangesAsync();
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("./Create");
         }
     }
 }
