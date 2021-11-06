@@ -7,14 +7,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SolarEclipse.Models
 {
-	public class MusicSub
+	public class VolunteerPosition
 	{
 		public int ID { get; set; }
 		[Required]
-		[DataType(DataType.EmailAddress)]
-		public string Email { get; set; }
+		public string Position { get; set; }
 		[Required]
-		[DataType(DataType.Url)]
-		public string MusicLink { get; set; }
+		public DateTime TimeStart { get; set; }
+		[Required]
+		public string PositionsFilled { get; set; }
 	}
 }

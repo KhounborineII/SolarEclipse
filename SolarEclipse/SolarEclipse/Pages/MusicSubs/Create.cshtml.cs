@@ -38,7 +38,7 @@ namespace SolarEclipse.Pages.MusicSubs
             _context.MusicSubs.Add(MusicSub);
             await _context.SaveChangesAsync();
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("./Create");
         }
     }
 }

@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using SolarEclipse.Data;
 using SolarEclipse.Models;
 
-namespace SolarEclipse.Pages.MusicSubs
+namespace SolarEclipse.Pages.Volunteers
 {
     public class EditModel : PageModel
     {
@@ -21,7 +21,7 @@ namespace SolarEclipse.Pages.MusicSubs
         }
 
         [BindProperty]
-        public MusicSub MusicSub { get; set; }
+        public Volunteer Volunteer { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -30,9 +30,9 @@ namespace SolarEclipse.Pages.MusicSubs
                 return NotFound();
             }
 
-            MusicSub = await _context.MusicSubs.FirstOrDefaultAsync(m => m.ID == id);
+            Volunteer = await _context.Volunteers.FirstOrDefaultAsync(m => m.ID == id);
 
-            if (MusicSub == null)
+            if (Volunteer == null)
             {
                 return NotFound();
             }
@@ -48,7 +48,7 @@ namespace SolarEclipse.Pages.MusicSubs
                 return Page();
             }
 
-            _context.Attach(MusicSub).State = EntityState.Modified;
+            _context.Attach(Volunteer).State = EntityState.Modified;
 
             try
             {
@@ -56,7 +56,7 @@ namespace SolarEclipse.Pages.MusicSubs
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!MusicSubExists(MusicSub.ID))
+                if (!VolunteerExists(Volunteer.ID))
                 {
                     return NotFound();
                 }
@@ -69,9 +69,9 @@ namespace SolarEclipse.Pages.MusicSubs
             return RedirectToPage("./Index");
         }
 
-        private bool MusicSubExists(int id)
+        private bool VolunteerExists(int id)
         {
-            return _context.MusicSubs.Any(e => e.ID == id);
+            return _context.Volunteers.Any(e => e.ID == id);
         }
     }
 }
