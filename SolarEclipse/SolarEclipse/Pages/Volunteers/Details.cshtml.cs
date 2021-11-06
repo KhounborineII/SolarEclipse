@@ -28,7 +28,10 @@ namespace SolarEclipse.Pages.Volunteers
                 return NotFound();
             }
 
-            Volunteer = await _context.Volunteers.FirstOrDefaultAsync(m => m.ID == id);
+            Volunteer = await _context.Volunteers
+                .Include(v => v.Position)
+                .AsNoTracking()
+                .FirstOrDefaultAsync(m => m.ID == id);
 
             if (Volunteer == null)
             {
