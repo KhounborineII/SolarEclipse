@@ -153,3 +153,8 @@ D:\Repository\SolarEclipse\SolarEclipse\SolarEclipse\obj\Debug\net5.0\Razor\Page
 D:\Repository\SolarEclipse\SolarEclipse\SolarEclipse\obj\Debug\net5.0\Razor\Pages\MusicSubs\Delete.cshtml.g.cs
 D:\Repository\SolarEclipse\SolarEclipse\SolarEclipse\obj\Debug\net5.0\Razor\Pages\MusicSubs\Details.cshtml.g.cs
 D:\Repository\SolarEclipse\SolarEclipse\SolarEclipse\obj\Debug\net5.0\Razor\Pages\MusicSubs\Index.cshtml.g.cs
+D:\Repository\SolarEclipse\SolarEclipse\SolarEclipse\obj\Debug\net5.0\Razor\Pages\Volunteers\Create.cshtml.g.cs
+D:\Repository\SolarEclipse\SolarEclipse\SolarEclipse\obj\Debug\net5.0\Razor\Pages\Volunteers\Delete.cshtml.g.cs
+D:\Repository\SolarEclipse\SolarEclipse\SolarEclipse\obj\Debug\net5.0\Razor\Pages\Volunteers\Details.cshtml.g.cs
+D:\Repository\SolarEclipse\SolarEclipse\SolarEclipse\obj\Debug\net5.0\Razor\Pages\Volunteers\Edit.cshtml.g.cs
+D:\Repository\SolarEclipse\SolarEclipse\SolarEclipse\obj\Debug\net5.0\Razor\Pages\Volunteers\Index.cshtml.g.cs

@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using SolarEclipse.Data;
 using SolarEclipse.Models;
 
-namespace SolarEclipse.Pages.MusicSubs
+namespace SolarEclipse.Pages.Volunteers
 {
     public class CreateModel : PageModel
     {
@@ -25,7 +25,7 @@ namespace SolarEclipse.Pages.MusicSubs
         }
 
         [BindProperty]
-        public MusicSub MusicSub { get; set; }
+        public Volunteer Volunteer { get; set; }
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
@@ -35,10 +35,10 @@ namespace SolarEclipse.Pages.MusicSubs
                 return Page();
             }
 
-            _context.MusicSubs.Add(MusicSub);
+            _context.Volunteers.Add(Volunteer);
             await _context.SaveChangesAsync();
 
-            return RedirectToPage("./Create");
+            return RedirectToPage("./Index");
         }
     }
 }

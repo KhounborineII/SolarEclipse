@@ -16,10 +16,14 @@ namespace SolarEclipse.Data
 
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<MusicSub> MusicSubs { get; set; }
+        public DbSet<Volunteer> Volunteers { get; set; }
+        public DbSet<VolunteerPosition> VolunteerPositions { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
             modelBuilder.Entity<Contact>().ToTable("Contact");
             modelBuilder.Entity<MusicSub>().ToTable("MusicSub");
+            modelBuilder.Entity<Volunteer>().ToTable("Volunteer");
+            modelBuilder.Entity<VolunteerPosition>().ToTable("VolunteerPosition");
         }
 
 
