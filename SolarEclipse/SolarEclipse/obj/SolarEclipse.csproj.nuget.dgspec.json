@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Repository\\SolarEclipse\\SolarEclipse\\SolarEclipse\\SolarEclipse.csproj": {}
+    "C:\\Users\\metam\\Desktop\\School Stuff\\SEM 1 SOP\\DATA\\SolarEclipse\\SolarEclipse\\SolarEclipse\\SolarEclipse.csproj": {}
   },
   "projects": {
-    "D:\\Repository\\SolarEclipse\\SolarEclipse\\SolarEclipse\\SolarEclipse.csproj": {
+    "C:\\Users\\metam\\Desktop\\School Stuff\\SEM 1 SOP\\DATA\\SolarEclipse\\SolarEclipse\\SolarEclipse\\SolarEclipse.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Repository\\SolarEclipse\\SolarEclipse\\SolarEclipse\\SolarEclipse.csproj",
+        "projectUniqueName": "C:\\Users\\metam\\Desktop\\School Stuff\\SEM 1 SOP\\DATA\\SolarEclipse\\SolarEclipse\\SolarEclipse\\SolarEclipse.csproj",
         "projectName": "SolarEclipse",
-        "projectPath": "D:\\Repository\\SolarEclipse\\SolarEclipse\\SolarEclipse\\SolarEclipse.csproj",
-        "packagesPath": "C:\\Users\\vanli\\.nuget\\packages\\",
-        "outputPath": "D:\\Repository\\SolarEclipse\\SolarEclipse\\SolarEclipse\\obj\\",
+        "projectPath": "C:\\Users\\metam\\Desktop\\School Stuff\\SEM 1 SOP\\DATA\\SolarEclipse\\SolarEclipse\\SolarEclipse\\SolarEclipse.csproj",
+        "packagesPath": "C:\\Users\\metam\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\metam\\Desktop\\School Stuff\\SEM 1 SOP\\DATA\\SolarEclipse\\SolarEclipse\\SolarEclipse\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\vanli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\metam\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -77,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

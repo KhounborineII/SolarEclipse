@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\vanli\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\vanli\\.nuget\\packages"
+      "C:\\Users\\metam\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\metam\\.nuget\\packages"
     ]
   }
 }

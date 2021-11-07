@@ -1,27 +1,63 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Merriweather+Sans&display=swap');
+
+
+header {
+    background-color: #CA4E00;
+}
+
+h1 {
+    font-family: 'Merriweather';
+    font-weight: bold;
+}
+
+p {
+    color: #1F5647;
+}
+
+label {
+    color: #1F5647;
+}
+
 a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+    font-family: 'Merriweather Sans';
 }
 
 /* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+    color: #CA4E00;
+    font-family: 'Merriweather Sans';
+}
+
+a:hover {
+    color: #C30C3E;
+    text-decoration: none;
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #1F5647;
+    background-color: white;
+    border-color: #CA4E00;
+    font-family: 'Merriweather';
+    border-radius: 0px;
+}
+
+.btn.btn-primary:hover {
+    color: white;
+    background-color: #CA4E00;
+    border-color: #CA4E00;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #000000;
+    border-color: #CA4E00;
 }
 
 /* Sticky footer styles
@@ -36,7 +72,7 @@ html {
 }
 
 .border-top {
-  border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
 }
 .border-bottom {
   border-bottom: 1px solid #e5e5e5;
@@ -59,13 +95,16 @@ html {
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    font-family: 'Merriweather Sans';
 }
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+    font-family: 'Merriweather Sans';
+    color: #74A18E;
 }
