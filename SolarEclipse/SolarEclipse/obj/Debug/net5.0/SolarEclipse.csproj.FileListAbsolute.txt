@@ -318,3 +318,4 @@ C:\Users\metam\Desktop\School Stuff\SEM 1 SOP\DATA\SolarEclipse\SolarEclipse\Sol
 C:\Users\metam\Desktop\School Stuff\SEM 1 SOP\DATA\SolarEclipse\SolarEclipse\SolarEclipse\obj\Debug\net5.0\SolarEclipse.pdb
 C:\Users\metam\Desktop\School Stuff\SEM 1 SOP\DATA\SolarEclipse\SolarEclipse\SolarEclipse\obj\Debug\net5.0\SolarEclipse.genruntimeconfig.cache
 C:\Users\metam\Desktop\School Stuff\SEM 1 SOP\DATA\SolarEclipse\SolarEclipse\SolarEclipse\obj\Debug\net5.0\SolarEclipse.csproj.CopyComplete
+C:\Users\metam\Desktop\School Stuff\SEM 1 SOP\DATA\SolarEclipse\SolarEclipse\SolarEclipse\obj\Debug\net5.0\Razor\Pages\Information\Index.cshtml.g.cs
