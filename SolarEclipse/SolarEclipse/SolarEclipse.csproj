@@ -27,7 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Assets\Images\" />
+    <None Include="wwwroot\lib\Assets\Images\EFGdfzgx.jpg" />
   </ItemGroup>
 
 </Project>
