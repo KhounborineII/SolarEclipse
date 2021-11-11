@@ -10,7 +10,16 @@ img {
     height: 300px;
 }
 
+.jumbotron .container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
 
+.jumbotron h1v{
+
+}
 
 header {
     background-color: #CA4E00;
