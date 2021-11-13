@@ -5,7 +5,7 @@
 
 // This code gotten from https://stackoverflow.com/questions/39858157/how-can-i-do-a-countdown-timer-with-html
 function getTimeRemaining(endtime) {
-    var t = Date.parse("April 08,2024") - Date.parse(new Date());
+    var t = Date.parse("April 08, 2024 12:33:00") - Date.parse(new Date());
     var seconds = Math.floor((t / 1000) % 60);
     var minutes = Math.floor((t / 1000 / 60) % 60);
     var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
