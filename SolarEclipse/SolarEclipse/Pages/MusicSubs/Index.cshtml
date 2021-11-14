@@ -14,6 +14,12 @@
                 @Html.DisplayNameFor(model => model.MusicSub[0].Email)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.MusicSub[0].Artist)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MusicSub[0].Song)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.MusicSub[0].MusicLink)
             </th>
             <th></th>
@@ -22,18 +28,24 @@
     <tbody>
         @foreach (var item in Model.MusicSub)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Email)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.MusicLink)
-                </td>
-                <td>
-                    <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
-                    <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
-                </td>
-            </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Artist)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Song)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MusicLink)
+            </td>
+            <td>
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
         }
     </tbody>
 </table>

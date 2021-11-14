@@ -14,6 +14,9 @@ namespace SolarEclipse.Models
 		[DataType(DataType.EmailAddress)]
 		public string Email { get; set; }
 		[Required]
+		public string Artist { get; set; }
+		[Required]
+		public string Song { get; set; }
 		[DataType(DataType.Url)]
 		public string MusicLink { get; set; }
 	}
