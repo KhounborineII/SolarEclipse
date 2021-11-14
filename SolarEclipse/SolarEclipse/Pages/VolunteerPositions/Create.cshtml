@@ -1,0 +1,44 @@
+﻿@page
+@model SolarEclipse.Pages.VolunteerPositions.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>VolunteerPosition</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="VolunteerPosition.Position" class="control-label"></label>
+                <input asp-for="VolunteerPosition.Position" class="form-control" />
+                <span asp-validation-for="VolunteerPosition.Position" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VolunteerPosition.TimeStart" class="control-label"></label>
+                <input asp-for="VolunteerPosition.TimeStart" class="form-control" />
+                <span asp-validation-for="VolunteerPosition.TimeStart" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VolunteerPosition.PositionsFilled" class="control-label"></label>
+                <input asp-for="VolunteerPosition.PositionsFilled" class="form-control" />
+                <span asp-validation-for="VolunteerPosition.PositionsFilled" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

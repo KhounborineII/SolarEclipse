@@ -6,9 +6,13 @@
 
   <ItemGroup>
     <Compile Remove="assets - Copy\**" />
+    <Compile Remove="Pages\VolunteerPosition\**" />
     <Content Remove="assets - Copy\**" />
+    <Content Remove="Pages\VolunteerPosition\**" />
     <EmbeddedResource Remove="assets - Copy\**" />
+    <EmbeddedResource Remove="Pages\VolunteerPosition\**" />
     <None Remove="assets - Copy\**" />
+    <None Remove="Pages\VolunteerPosition\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,10 +32,6 @@
 
   <ItemGroup>
     <None Include="wwwroot\lib\Assets\Images\EFGdfzgx.jpg" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Pages\VolunteerPosition\" />
   </ItemGroup>
 
 </Project>
