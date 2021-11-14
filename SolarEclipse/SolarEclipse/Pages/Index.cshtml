@@ -4,27 +4,35 @@
     ViewData["Title"] = "Home page";
 }
 
-<section class="jumbotron">
+<div class="row">
+    <figure class="col-sm-4">
+        <img class="logos" src="~/lib/Assets/Images/hendrixLogo_bob.svg" alt="image test" height="100" />
+    </figure>
+    <figure class="col-sm-6" id="titlecard">
+        <h1>Solar Eclipse Celebration</h1>
+    </figure>
+</div>
+<section class="jumbotron" id="countdowntimer">
     <div class="container">
-        <h1 class="display-4">Countdown To The Eclipse</h1>
+        <h1 class="display-4">Countdown To Totality</h1>
     </div>
     <div class="container">
         <!-- this code gotten from https://stackoverflow.com/questions/39858157/how-can-i-do-a-countdown-timer-with-html -->
         <div class="row" id="clockdiv">
             <div class="col-md-3">
-                <span class="days"></span>
+                <span class="days" id="datenumbers"></span>
                 <div class="text">Days</div>
             </div>
             <div class="col-md-3">
-                <span class="hours"></span>
+                <span class="hours" id="datenumbers"></span>
                 <div class="text">Hours</div>
             </div>
             <div class="col-md-3">
-                <span class="minutes"></span>
+                <span class="minutes" id="datenumbers"></span>
                 <div class="text">Minutes</div>
             </div>
             <div class="col-md-3">
-                <span class="seconds"></span>
+                <span class="seconds" id="datenumbers"></span>
                 <div class="text">Seconds</div>
             </div>
         </div>
