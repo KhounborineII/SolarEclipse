@@ -38,6 +38,9 @@ img {
     background: url(../lib/Assets/Images/BannerOriginalv1.png) no-repeat center #000;
 }
 
+#countdowntext {
+    background: rgba(0,0,0,0.5);
+}
 .jumbotron .container {
     display: flex;
     align-items: center;
