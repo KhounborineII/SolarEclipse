@@ -22,17 +22,16 @@ img {
 
 .display-4 {
     color: white;
-    text-shadow: 0.6px 0.6px 0.6px #000000;
 }
 
 .text {
     color: white;
-    text-shadow: 0.6px 0.6px 0.6px #000000;
+    
 }
 
 #datenumbers {
     color: white;
-    text-shadow: 0.6px 0.6px 0.6px #000000;
+    
 }
 #countdowntimer {
     background: url(../lib/Assets/Images/BannerOriginalv1.png) no-repeat center #000;
