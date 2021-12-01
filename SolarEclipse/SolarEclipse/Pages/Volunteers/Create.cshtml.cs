@@ -18,9 +18,10 @@ namespace SolarEclipse.Pages.Volunteers
         {
             _context = context;
         }
-
+        public SelectList Positions { get; set; }
         public IActionResult OnGet()
         {
+            Positions = new SelectList(_context.VolunteerPositions, nameof(VolunteerPosition.ID), nameof(VolunteerPosition.Position));
             return Page();
         }
 

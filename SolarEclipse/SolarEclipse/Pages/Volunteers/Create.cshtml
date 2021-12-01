@@ -8,6 +8,7 @@
 <h1>Volunteer</h1>
 
 <hr />
+
 <div class="row">
     <div class="col-md-4">
         <form method="post">
@@ -33,6 +34,12 @@
                 <span asp-validation-for="Volunteer.TimeStart" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Volunteer.Position" class="control-label"></label>
+                <select asp-for="Volunteer.Position" class="form-control" name="VolunteerPositions" asp-items="Model.Positions"></select>
+                <span asp-validation-for="Volunteer.Position" class="text-danger"></span>
+
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
@@ -40,7 +47,7 @@
 </div>
 
 <div>
-    <a asp-page="Index">Back to List</a>
+    <a asp-page="/VolunteerPositions/Index">Back to List</a>
 </div>
 
 @section Scripts {

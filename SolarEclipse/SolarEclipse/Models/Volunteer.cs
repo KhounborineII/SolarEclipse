@@ -17,7 +17,6 @@ namespace SolarEclipse.Models
 		[Required]
 		[DataType(DataType.EmailAddress)]
 		public string Email { get; set; }
-		[Required]
 		public VolunteerPosition Position { get; set; }
 		public DateTime TimeStart { get; set; }
 	}
