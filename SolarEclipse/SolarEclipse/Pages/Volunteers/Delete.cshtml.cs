@@ -29,7 +29,10 @@ namespace SolarEclipse.Pages.Volunteers
                 return NotFound();
             }
 
-            Volunteer = await _context.Volunteers.FirstOrDefaultAsync(m => m.ID == id);
+            Volunteer = await _context.Volunteers
+                .AsNoTracking()
+                .Include(v => v.Position)
+                .FirstOrDefaultAsync(m => m.VolunteerID == id);
 
             if (Volunteer == null)
             {
@@ -53,7 +56,7 @@ namespace SolarEclipse.Pages.Volunteers
                 await _context.SaveChangesAsync();
             }
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("/AdminInfo/Index");
         }
     }
 }

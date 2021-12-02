@@ -28,7 +28,10 @@ namespace SolarEclipse.Pages.AdminInfo
         {
             Contact = await _context.Contacts.ToListAsync();
             MusicSub = await _context.MusicSubs.ToListAsync();
-            Volunteer = await _context.Volunteers.ToListAsync();
+            Volunteer = await _context.Volunteers
+                .Include(v => v.Position)
+                .AsNoTracking()
+                .ToListAsync();
         }
     }
 }

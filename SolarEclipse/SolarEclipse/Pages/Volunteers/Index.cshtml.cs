@@ -23,7 +23,10 @@ namespace SolarEclipse.Pages.Volunteers
 
         public async Task OnGetAsync()
         {
-            Volunteer = await _context.Volunteers.ToListAsync();
+            Volunteer = await _context.Volunteers
+                .Include(v => v.Position)
+                .AsNoTracking()
+                .ToListAsync();
         }
     }
 }

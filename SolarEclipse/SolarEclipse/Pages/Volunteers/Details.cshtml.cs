@@ -31,7 +31,7 @@ namespace SolarEclipse.Pages.Volunteers
             Volunteer = await _context.Volunteers
                 .Include(v => v.Position)
                 .AsNoTracking()
-                .FirstOrDefaultAsync(m => m.ID == id);
+                .FirstOrDefaultAsync(m => m.VolunteerID == id);
 
             if (Volunteer == null)
             {

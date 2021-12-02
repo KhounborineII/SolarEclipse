@@ -30,7 +30,7 @@ namespace SolarEclipse.Pages.VolunteerPositions
                 return NotFound();
             }
 
-            VolunteerPosition = await _context.VolunteerPositions.FirstOrDefaultAsync(m => m.ID == id);
+            VolunteerPosition = await _context.VolunteerPositions.FirstOrDefaultAsync(m => m.VolunteerPositionID == id);
 
             if (VolunteerPosition == null)
             {
@@ -56,7 +56,7 @@ namespace SolarEclipse.Pages.VolunteerPositions
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!VolunteerPositionExists(VolunteerPosition.ID))
+                if (!VolunteerPositionExists(VolunteerPosition.VolunteerPositionID))
                 {
                     return NotFound();
                 }
@@ -71,7 +71,7 @@ namespace SolarEclipse.Pages.VolunteerPositions
 
         private bool VolunteerPositionExists(int id)
         {
-            return _context.VolunteerPositions.Any(e => e.ID == id);
+            return _context.VolunteerPositions.Any(e => e.VolunteerPositionID == id);
         }
     }
 }

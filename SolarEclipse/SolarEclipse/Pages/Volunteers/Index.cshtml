@@ -23,7 +23,7 @@
                 @Html.DisplayNameFor(model => model.Volunteer[0].Email)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Volunteer[0].TimeStart)
+                @Html.DisplayNameFor(model => model.Volunteer[0].Position)
             </th>
             <th></th>
         </tr>
@@ -41,12 +41,11 @@
                 @Html.DisplayFor(modelItem => item.Email)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.TimeStart)
+                @Html.DisplayFor(modelItem => item.Position.Position)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+                <a asp-page="./Details" asp-route-id="@item.VolunteerID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.VolunteerID">Delete</a>
             </td>
         </tr>
 }

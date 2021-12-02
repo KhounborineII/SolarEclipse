@@ -9,7 +9,7 @@ namespace SolarEclipse.Models
 {
 	public class VolunteerPosition
 	{
-		public int ID { get; set; }
+		public int VolunteerPositionID { get; set; }
 		[Required]
 		public string Position { get; set; }
 		[Required]

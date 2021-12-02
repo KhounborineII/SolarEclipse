@@ -53,7 +53,7 @@ namespace SolarEclipse.Pages.Contacts
                 await _context.SaveChangesAsync();
             }
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("/AdminInfo/Index");
         }
     }
 }

@@ -10,7 +10,7 @@ using SolarEclipse.Models;
 
 namespace SolarEclipse.Pages.Volunteers
 {
-    public class CreateModel : PageModel
+    public class CreateModel : VolunteerPositionNamePageModel
     {
         private readonly SolarEclipse.Data.SolarEclipseContext _context;
 
@@ -21,7 +21,7 @@ namespace SolarEclipse.Pages.Volunteers
         public SelectList Positions { get; set; }
         public IActionResult OnGet()
         {
-            Positions = new SelectList(_context.VolunteerPositions, nameof(VolunteerPosition.ID), nameof(VolunteerPosition.Position));
+            PopulatePositionsDropDownList(_context);
             return Page();
         }
 
@@ -31,15 +31,20 @@ namespace SolarEclipse.Pages.Volunteers
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
-            if (!ModelState.IsValid)
+            var emptyVolunteer = new Volunteer();
+            
+            if (await TryUpdateModelAsync<Volunteer>(
+                emptyVolunteer,
+                "volunteer",
+                s => s.VolunteerID, s => s.VolunteerPositionID, s => s.FirstName, s => s.LastName, s => s.Email))
             {
-                return Page();
+                _context.Volunteers.Add(emptyVolunteer);
+                await _context.SaveChangesAsync();
+                return RedirectToPage("/VolunteerPositions/Index");
             }
 
-            _context.Volunteers.Add(Volunteer);
-            await _context.SaveChangesAsync();
-
-            return RedirectToPage("./Index");
+            PopulatePositionsDropDownList(_context, emptyVolunteer.VolunteerPositionID);
+            return Page();
         }
     }
 }

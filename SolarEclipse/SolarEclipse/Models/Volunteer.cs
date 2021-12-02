@@ -9,15 +9,12 @@ namespace SolarEclipse.Models
 {
 	public class Volunteer
 	{
-		public int ID { get; set; }
-		[Required]
+		public int VolunteerID { get; set; }
 		public string FirstName { get; set; }
-		[Required]
 		public string LastName { get; set; }
-		[Required]
 		[DataType(DataType.EmailAddress)]
 		public string Email { get; set; }
+		public int VolunteerPositionID { get; set; }
 		public VolunteerPosition Position { get; set; }
-		public DateTime TimeStart { get; set; }
 	}
 }

@@ -29,7 +29,7 @@ namespace SolarEclipse.Pages.VolunteerPositions
                 return NotFound();
             }
 
-            VolunteerPosition = await _context.VolunteerPositions.FirstOrDefaultAsync(m => m.ID == id);
+            VolunteerPosition = await _context.VolunteerPositions.FirstOrDefaultAsync(m => m.VolunteerPositionID == id);
 
             if (VolunteerPosition == null)
             {
