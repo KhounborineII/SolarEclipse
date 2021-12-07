@@ -17,6 +17,7 @@ namespace SolarEclipse.Models
 		public string Artist { get; set; }
 		[Required]
 		public string Song { get; set; }
+		[Display(Name = "Music Link")]
 		[DataType(DataType.Url)]
 		public string MusicLink { get; set; }
 	}

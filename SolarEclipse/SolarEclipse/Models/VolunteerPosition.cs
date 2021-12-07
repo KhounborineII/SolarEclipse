@@ -13,8 +13,10 @@ namespace SolarEclipse.Models
 		[Required]
 		public string Position { get; set; }
 		[Required]
+		[Display(Name = "Start Time")]
 		public DateTime TimeStart { get; set; }
 		[Required]
+		[Display(Name = "Spots Filled")]
 		public string PositionsFilled { get; set; }
 	}
 }
