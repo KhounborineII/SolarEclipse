@@ -25,6 +25,7 @@ namespace SolarEclipse.Data
             modelBuilder.Entity<Volunteer>().ToTable("Volunteer");
             modelBuilder.Entity<VolunteerPosition>().ToTable("VolunteerPosition");
         }
+        public DbSet<Post> Post { get; set; }
 
 
     }
