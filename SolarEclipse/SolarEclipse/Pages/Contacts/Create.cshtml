@@ -2,7 +2,7 @@
 @model SolarEclipse.Pages.Contacts.CreateModel
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Contact";
 }
 
 <h1>Contact</h1>
@@ -24,7 +24,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Contact.Message" class="control-label"></label>
-                <input asp-for="Contact.Message" class="form-control" />
+                <textarea asp-for="Contact.Message" class="form-control" id="FormControlTextArea" rows="4"></textarea>
                 <span asp-validation-for="Contact.Message" class="text-danger"></span>
             </div>
             <div class="form-group">
