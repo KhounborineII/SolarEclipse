@@ -60,6 +60,11 @@ h1 {
     font-weight: bold;
 }
 
+h8 {
+    font-family: 'Merriweather';
+    font-weight: bold;
+}
+
 p {
     color: #1F5647;
 }
@@ -98,6 +103,20 @@ a:hover {
     color: white;
     background-color: #CA4E00;
     border-color: #CA4E00;
+}
+
+.btn-secondary {
+    color: white;
+    background-color: #CA4E00;
+    border-color: #CA4E00;
+    font-family: 'Merriweather Sans';
+    border-radius: 0px;
+}
+
+.btn.btn-secondary:hover {
+    color: white;
+    background-color: #C30C3E;
+    border-color: #C30C3E;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
@@ -152,5 +171,6 @@ body {
     white-space: nowrap;
     line-height: 60px; /* Vertically center the text there */
     font-family: 'Merriweather Sans';
-    color: #74A18E;
+    color: white;
+    background-color: #CA4E00;
 }
