@@ -30,7 +30,7 @@ namespace SolarEclipse
                 {
                     var context = services.GetRequiredService<SolarEclipseContext>();
                     context.Database.EnsureCreated();
-                    // DbInitializer.Initialize(context);
+                    DbInitializer.Initialize(context);
                 }
                 catch (Exception ex)
                 {

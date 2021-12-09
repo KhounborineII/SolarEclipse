@@ -1,124 +1,179 @@
-﻿@page 
+﻿@page
+
 @model SolarEclipse.Pages.AdminInfo.IndexModel
 
 @{
     ViewData["Title"] = "Admin Information";
 }
 
-<h1>Index</h1>
+<script type="text/javascript">
+    function changeTable(num) {
+        var lookup = {
+            1: "contact",
+            2: "music",
+            3: "volunteer",
+            4: "position"
+        }
+        console.log("on click")
+        document.getElementById(lookup[num]).style.display = "block";
+        for (let key in lookup) {
+            if (key != num) {
+                document.getElementById(lookup[key]).style.display = "none";
+            }
+        }
+        return false
+    }
+</script>
 
-<p>
-    Contact Info
-</p>
+<h1>Admin Information</h1>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Contact[0].Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Contact[0].Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Contact[0].Message)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.Contact)
-        {
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-orange border-bottom box-shadow mb-3">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a onclick="javascript:return changeTable(1)" class="nav-link text-light" asp-area="" asp-page="">Contact Information</a>
+                        </li>
+                        <li class="nav-item">
+                            <a onclick="javascript:return changeTable(2)" data-link="b" class="nav-link text-light" asp-area="" asp-page="">Music Submissions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a onclick="javascript:return changeTable(3)" data-link="c" class="nav-link text-light" asp-area="" asp-page="">Volunteers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a onclick="javascript:return changeTable(4)" data-link="d" class="nav-link text-light" asp-area="" asp-page="">Volunteer Positions</a>
+                        </li>
+                        <li class="nav-item">
+                            
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+</body>
+
+<div id="contact">
+    <p>
+        Contact Info
+    </p>
+    <table class="table">
+        <thead>
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
+                <th>
+                    @Html.DisplayNameFor(model => model.Contact[0].Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Contact[0].Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Contact[0].Message)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Contact)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Message)
+                    </td>
+                    <td>
+                        <a asp-page="/Contacts/Details" asp-route-id="@item.ID">Details</a> |
+                        <a asp-page="/Contacts/Delete" asp-route-id="@item.ID">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div id="music" style="display: none">
+    <p>
+        Music Submissions Info
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.MusicSub[0].Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MusicSub[0].Artist)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MusicSub[0].Song)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MusicSub[0].MusicLink)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.MusicSub)
+            {
+            <tr>
                 <td>
                     @Html.DisplayFor(modelItem => item.Email)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Message)
+                    @Html.DisplayFor(modelItem => item.Artist)
                 </td>
                 <td>
-                    <a asp-page="/Contacts/Details" asp-route-id="@item.ID">Details</a> |
-                    <a asp-page="/Contacts/Delete" asp-route-id="@item.ID">Delete</a>
+                    @Html.DisplayFor(modelItem => item.Song)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MusicLink)
+                </td>
+                <td>
+                    <a asp-page="/MusicSubs/Details" asp-route-id="@item.ID">Details</a> |
+                    <a asp-page="/MusicSubs/Delete" asp-route-id="@item.ID">Delete</a>
                 </td>
             </tr>
-        }
-    </tbody>
-</table>
+            }
+        </tbody>
+    </table>
+</div>
 
-<p>
-    Music Submissions Info
-</p>
-
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.MusicSub[0].Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MusicSub[0].Artist)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MusicSub[0].Song)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MusicSub[0].MusicLink)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.MusicSub)
-        {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Artist)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Song)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MusicLink)
-            </td>
-            <td>
-                <a asp-page="/MusicSubs/Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-page="/MusicSubs/Delete" asp-route-id="@item.ID">Delete</a>
-            </td>
-        </tr>
-        }
-    </tbody>
-</table>
-
-<p>
-    Volunteer Info
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Volunteer[0].FirstName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Volunteer[0].LastName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Volunteer[0].Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Volunteer[0].Position)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.Volunteer)
-        {
+<div id="volunteer" style="display: none">
+    <p>
+        Volunteer Info
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Volunteer[0].FirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Volunteer[0].LastName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Volunteer[0].Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Volunteer[0].Position)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Volunteer)
+            {
             <tr>
                 <td>
                     @Html.DisplayFor(modelItem => item.FirstName)
@@ -137,7 +192,49 @@
                     <a asp-page="/Volunteers/Delete" asp-route-id="@item.VolunteerID">Delete</a>
                 </td>
             </tr>
-        }
-    </tbody>
-</table>
+            }
+        </tbody>
+    </table>
+</div>
 
+<div id="position" style="display: none">
+    <p>
+        Volunteer Position Info
+    </p>
+    <a class="btn btn-secondary" href="/VolunteerPositions/Create">Add Volunteer Positions</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.VolunteerPosition[0].Position)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VolunteerPosition[0].TimeStart)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VolunteerPosition[0].PositionsFilled)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.VolunteerPosition)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Position)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TimeStart)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PositionsFilled)
+                </td>
+                <td>
+                    <a asp-page="/VolunteerPositions/Details" asp-route-id="@item.VolunteerPositionID">Details</a> |
+                    <a asp-page="/VolunteerPositions/Delete" asp-route-id="@item.VolunteerPositionID">Delete</a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
