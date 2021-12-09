@@ -1,0 +1,52 @@
+﻿@page
+@model SolarEclipse.Pages.AdminLogin.loginModel
+@{
+}
+
+<script type="text/javascript">
+    function trueSight(user, pass) {
+        canSee = true
+        src = "/Shared/_Layout.cshtml"
+        var admins = {
+            admin1: ["treyhoopchuk","12345"]
+        }
+        var user = document.getElementById("userInput").value
+        var pass = document.getElementById("passwordInput").value
+        for (let key in admins) {
+            if (user == admins[key][0] && pass == admins[key][1]) {
+                canSee = true
+                console.log("is admin")
+            }
+        }
+        return false
+    }
+</script>
+
+<div class="container border" style="padding:20px" onload="javascript: return trueSight()">
+    <form method="post">
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="Credential.userName">User Name</label>
+            </div>
+            <div class="col-5">
+                <input id="userInput" type="text" asp-for="Credential.userName" class="form-control" />
+            </div>
+            <span class="text-danger" asp-validation-for="Credential.userName"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="Credential.password">Password</label>
+            </div>
+            <div class="col-5">
+                <input id="passwordInput" type="password" asp-for="Credential.password" class="form-control" />
+            </div>
+            <span class="text-danger" asp-validation-for="Credential.password"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <input onclick="javascript: trueSight()" type="submit" class="btn btn-primary" value="Login" />
+            </div>
+        </div>
+    </form>
+</div>
