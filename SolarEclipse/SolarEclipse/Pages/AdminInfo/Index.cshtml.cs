@@ -23,6 +23,7 @@ namespace SolarEclipse.Pages.AdminInfo
         public IList<Contact> Contact { get;set; }
         public IList<MusicSub> MusicSub { get; set; }
         public IList<Volunteer> Volunteer { get; set; }
+        public IList<VolunteerPosition> VolunteerPosition { get; set; }
 
         public async Task OnGetAsync()
         {
@@ -32,6 +33,7 @@ namespace SolarEclipse.Pages.AdminInfo
                 .Include(v => v.Position)
                 .AsNoTracking()
                 .ToListAsync();
+            VolunteerPosition = await _context.VolunteerPositions.ToListAsync();
         }
     }
 }

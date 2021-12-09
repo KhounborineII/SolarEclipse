@@ -1,4 +1,16 @@
 ﻿<!DOCTYPE html>
+
+<script type="text/javascript">
+    var canSee = false
+    function isAdmin() {
+        console.log(canSee)
+        if (canSee == true) {
+            document.getElementById("adminInfo").style.display = "block";
+        }
+        return false
+    }
+</script>
+
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -9,9 +21,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="~/css/site.css" />
-    
 </head>
-<body>
+
+<body onload="javascript:return isAdmin()">
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-orange border-bottom box-shadow mb-3">
             <div class="container">
@@ -42,7 +54,7 @@
                             <a class="nav-link text-light" asp-area="" asp-page="/Contacts/Create">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-page="/AdminInfo/Index">Admin Information</a>
+                            <a id="adminInfo" style="display: none" class="nav-link text-light" asp-area="" asp-page="/AdminInfo/Index">Admin Information</a>
                         </li>
                     </ul>
                 </div>
@@ -58,6 +70,7 @@
     <footer class="border-top footer text-white">
         <div class="container">
             &copy; 2021 - Hendrix Solar Eclipse Event 2024
+            <a class="nav-link text-light" asp-area="" asp-page="/AdminLogin/login">Login</a>
         </div>
     </footer>
 
